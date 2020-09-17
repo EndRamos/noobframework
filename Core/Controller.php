@@ -15,6 +15,5 @@ class Controller {
             }
         }
         trigger_error("supported files are HTML, PHP and PHTML");
-
     }
 }
