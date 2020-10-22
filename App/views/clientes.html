@@ -28,16 +28,16 @@
                         <td><?php echo $cliente['email']; ?></td>
                         <td><?php echo $cliente['telefone']; ?></td>
                         <td>
-                            <a href="cliente/edit/<?php echo $cliente['id'] ?>"><button class="btn btn-primary">Editar</button></a>
-                            <a href="cliente/delete/<?php echo $cliente['id'] ?>"><button class="btn btn-danger">Apagar</button></a>
+                            <a href="clientes/edit/<?php echo $cliente['id'] ?>"><button class="btn btn-primary">Editar</button></a>
+                            <a href="clientes/delete/<?php echo $cliente['id'] ?>"><button class="btn btn-danger">Apagar</button></a>
                         </td>
                     </tr>
                 <?php } ?>
                 <form class="form-horizontal" action="/basicCRUD/modules/record" method="POST" role="form">
                     <tr class="bg-primary">
-                        <td><input type="text" name="nome" class="form-control" id="title" placeholder="Nome"></td>
-                        <td colspan="2"><input type="text" name="email" class="form-control" id="email" placeholder="Email"></td>
-                        <td><input type="text" name="telefone" class="form-control" id="telefone" placeholder="Telefone"></td>
+                        <td><input type="text" name="nome" class="form-control" id="title" placeholder="Nome" required></td>
+                        <td colspan="2"><input type="text" name="email" class="form-control" id="email" placeholder="Email" required></td>
+                        <td><input type="text" name="telefone" class="form-control" id="telefone" placeholder="Telefone" required></td>
                         <td><input type="submit" value="Adicionar" class="btn btn-default"></td>
                     </tr>
                 </form>
