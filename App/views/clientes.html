@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
 
-    <title>Document</title>
+    <title>Clientes</title>
 </head>
 <body>
     <div class="container">
-        <h2>Clientes</h2>
-        <table class='table table-hover'>
-            <thead class='thead-dark'>
+        <h2 class="text-center">Clientes</h2>
+        <table class='table text-center'>
+            <thead class='thead-light'>
                 <tr>
                     <th class="text-center">ID</th>
                     <th class="text-center">Nome</th>
@@ -28,17 +28,17 @@
                         <td><?php echo $cliente['email']; ?></td>
                         <td><?php echo $cliente['telefone']; ?></td>
                         <td>
-                            <a href="clientes/edit/<?php echo $cliente['id'] ?>"><button class="btn btn-primary">Editar</button></a>
-                            <a href="clientes/delete/<?php echo $cliente['id'] ?>"><button class="btn btn-danger">Apagar</button></a>
+                            <a href="#"><button class="btn btn-primary">Editar</button></a>
+                            <a href="#>"><button class="btn btn-danger">Deletar</button></a>
                         </td>
                     </tr>
                 <?php } ?>
-                <form class="form-horizontal" action="/basicCRUD/modules/record" method="POST" role="form">
-                    <tr class="bg-primary">
-                        <td><input type="text" name="nome" class="form-control" id="title" placeholder="Nome" required></td>
-                        <td colspan="2"><input type="text" name="email" class="form-control" id="email" placeholder="Email" required></td>
-                        <td><input type="text" name="telefone" class="form-control" id="telefone" placeholder="Telefone" required></td>
-                        <td><input type="submit" value="Adicionar" class="btn btn-default"></td>
+                <form action="#" method="POST">
+                    <tr class="bg-white">
+                        <td><input class="form-control" type="text" name="nome" placeholder="Nome"></td>
+                        <td colspan="2"><input class="form-control" type="text" name="email" placeholder="Email"></td>
+                        <td><input class="form-control" type="text" name="telefone" placeholder="Telefone"></td>
+                        <td><input class="btn btn-success" type="submit" value="Cadastrar"></td>
                     </tr>
                 </form>
             </tbody>

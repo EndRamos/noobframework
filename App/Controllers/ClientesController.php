@@ -6,12 +6,14 @@ use App\Models\Clientes;
 
 class ClientesController extends Controller {
 
-    public function index() {
-        $clientes = Clientes::get();
-        $this->view('clientes', ['clientes' => $clientes]);
+    private $clienteModel;
+
+    public function __construct() {
+        $this->clienteModel = new Clientes();
     }
 
-    public function edit() {
-        die("Editando....");
+    public function index() {
+        $clientes = $this->clienteModel->get();
+        $this->view('clientes', ['clientes' => $clientes]);
     }
 }
