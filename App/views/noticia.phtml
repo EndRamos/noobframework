@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $noticia['titulo']?></title>
+    <link rel="stylesheet" href="../../public/css/portal.css" type="text/css" />
+</head>
+<body>
+    <div class='container'>
+        <header>
+            <div class='content-header'>
+                <img class='img_logo' src="https://image.flaticon.com/icons/png/512/21/21601.png" alt="">
+            </div>
+        </header>
+        <section>
+            <article>
+                <div class='content-article'>
+                    <h1 class='title'><?php echo $noticia['titulo']?></h1>
+                    <center>
+                        <img class='img_noticia' src="<?php echo $noticia['imagem']?>" alt="">
+                    </center>
+                    <p><?php echo $noticia['conteudo']?></p>
+                </div>
+            </article>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="public/css/portal.css" type="text/css" />
+</head>
+<body>
+    <div class='container'>
+        <header>
+            <div class='content-header'>
+                <img class='img_logo' src="https://image.flaticon.com/icons/png/512/21/21601.png" alt="">
+            </div>
+        </header>
+        <section>
+            <div class='content-portal'>
+                <ul>
+                    <?php foreach($noticias as $noticia) { ?>
+                        <div>
+                            <img class='mini_noticia' src="<?php echo $noticia['imagem']?>" alt="">
+                            <li><a href="<?php echo 'https://localhost/noobframework/portal/noticia/'.$noticia['titulo_url']?>"><?php echo $noticia['titulo'];?></a></li>
+                        </div>
+                    <?php } ?>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>
